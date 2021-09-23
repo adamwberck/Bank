@@ -1,2 +1,7 @@
-Please Enter Details!
-1. F
+Please Enter Details for Your New Account
+Your First and Last Name:
+Your Address
+Your Phone Number
+Your ID
+Your Password
+Initial Deposit Amount

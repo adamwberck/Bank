@@ -8,6 +8,5 @@ public class BankApp {
     public static void main(String[] args){
         var bankPrinter = new BankPrinter();
         var bankController = new BankController();
-        bankPrinter.displayWelcome();
     }
 }
