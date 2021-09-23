@@ -1,0 +1,4 @@
+Welcome!
+1. Create New Account [f0]
+2. Login [f1]
+3. Exit [exit]
