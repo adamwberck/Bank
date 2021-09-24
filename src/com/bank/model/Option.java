@@ -1,14 +1,21 @@
 package com.bank.model;
 
-public class Options {
+public class Option {
     private final String text;
     private final int number;
-    private final Screen link;
+    private Screen link;
+    private String key;
 
-    public Options(String text, int number, Screen link) {
+    public Option(String text, int number, Screen link) {
         this.text = text;
         this.number = number;
         this.link = link;
+    }
+
+    public Option(String text, int number, String key) {
+        this.text = text;
+        this.number = number;
+        this.key = key;
     }
 
     public String getText() {
@@ -21,5 +28,9 @@ public class Options {
 
     public Screen getLink() {
         return link;
+    }
+
+    public void setLink(Screen link) {
+        this.link = link;
     }
 }

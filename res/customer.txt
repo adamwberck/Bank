@@ -1,0 +1,8 @@
+Selection
+Welcome!
+1. Deposit Amount
+2. Withdraw Amount
+3. Funds Transfer
+4. View 5 Recent Transactions
+5. Display Customer Information
+6. Sign Out
