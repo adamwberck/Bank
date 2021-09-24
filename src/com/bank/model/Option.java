@@ -3,19 +3,13 @@ package com.bank.model;
 public class Option {
     private final String text;
     private final int number;
-    private Screen link;
+    private String action; //TODO replace with controller implementation
     private String key;
 
-    public Option(String text, int number, Screen link) {
+    public Option(String text, int number, String action) {
         this.text = text;
         this.number = number;
-        this.link = link;
-    }
-
-    public Option(String text, int number, String key) {
-        this.text = text;
-        this.number = number;
-        this.key = key;
+        this.action = action;
     }
 
     public String getText() {
@@ -24,13 +18,5 @@ public class Option {
 
     public int getNumber() {
         return number;
-    }
-
-    public Screen getLink() {
-        return link;
-    }
-
-    public void setLink(Screen link) {
-        this.link = link;
     }
 }
