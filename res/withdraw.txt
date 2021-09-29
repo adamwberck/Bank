@@ -1,4 +1,4 @@
 Form
 Withdraw
-Enter Deposit Amount:
+Enter Withdraw Amount:
 ->

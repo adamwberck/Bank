@@ -1,5 +1,9 @@
 package com.bank.model;
 
+import com.bank.BankSingleton;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Account {
@@ -9,6 +13,7 @@ public class Account {
     private String phone;
     final private String ID;
     private String password;
+    private List<Transaction> transactions = new ArrayList<>();
 
     public Account(String name, String address, String phone, String ID, String password) {
         this.checking = 0;
@@ -70,13 +75,44 @@ public class Account {
 
     @Override
     public String toString() {
+        var df = new DecimalFormat("#.00");
         return "Your Bank Account!\n" +
-                "Checking Balance: " + checking +
+                "Checking Balance: " + df.format(checking) +
                 "Full Name: " + name + '\n' +
                 "Address: " + address + '\n' +
                 "Phone: " + phone + '\n' +
                 "ID: " + ID + '\n' +
                 "Password=: " + password + '\n' +
                 '}';
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void add(String withdrawOrDeposit, double amount) {
+        this.transactions.add(new Transaction(withdrawOrDeposit, amount));
+    }
+
+    public void displayRecent() {
+        for(int i=0; i < Math.min(transactions.size(),5); i++){
+            System.out.println(transactions.get(i).toString());
+        }
+    }
+
+    public class Transaction {
+        final private String withdrawOrDeposit;
+        final private double amount;
+
+        public Transaction(String withdrawOrDeposit, double amount) {
+            this.withdrawOrDeposit = withdrawOrDeposit;
+            this.amount = amount;
+        }
+
+        @Override
+        public String toString() {
+            return "Transaction: "+ withdrawOrDeposit + '\'' +
+                    " - " + amount;
+        }
     }
 }

@@ -5,4 +5,5 @@ Welcome!
 2. Withdraw Amount
 3. Funds Transfer
 4. Display Customer Information
-5. Sign Out
+5. Display Last 5 Transactions
+6. Sign Out
