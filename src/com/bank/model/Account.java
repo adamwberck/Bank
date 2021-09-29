@@ -28,10 +28,10 @@ public class Account {
     }
 
     public Account(List<String> values) {
+        this.ID = values.get(3);
         this.name = values.get(0);
         this.address = values.get(1);
         this.phone = values.get(2);
-        this.ID = values.get(3);
         this.password = values.get(4);
         this.checking = Double.parseDouble(values.get(5));
     }
@@ -66,5 +66,17 @@ public class Account {
 
     public String getPass() {
         return password;
+    }
+
+    @Override
+    public String toString() {
+        return "Your Bank Account!\n" +
+                "Checking Balance: " + checking +
+                "Full Name: " + name + '\n' +
+                "Address: " + address + '\n' +
+                "Phone: " + phone + '\n' +
+                "ID: " + ID + '\n' +
+                "Password=: " + password + '\n' +
+                '}';
     }
 }

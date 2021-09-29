@@ -29,10 +29,8 @@ public class BankController {
                     case 2:
                         return "Transfer";
                     case 3:
-                        return "Recent";
-                    case 4:
                         return "Info";
-                    case 5:
+                    case 4:
                         return "Welcome";
                 }
                 break;
@@ -67,6 +65,9 @@ public class BankController {
                 if(BankSingleton.withdraw(values.get(1))){
                     BankSingleton.deposit(values.get(0), values.get(1));
                 }
+                return "Customer";
+            case "Info":
+                BankSingleton.displayLoggedIn();
                 return "Customer";
         }
         return "";

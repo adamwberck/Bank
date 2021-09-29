@@ -69,4 +69,9 @@ final public class BankSingleton {
     private static Account getAccountByID(String account_id) {
         return get().all_accounts.get(account_id);
     }
+
+    public static void displayLoggedIn() {
+        Account loggedIn = getLoggedIn();
+        System.out.println(loggedIn.toString());
+    }
 }
