@@ -15,7 +15,7 @@ final public class BankSingleton {
 
     public static BankSingleton get(){
         if (bankSingleton==null) {
-            return new BankSingleton();
+            bankSingleton = new BankSingleton();
         }
         return bankSingleton;
     }
@@ -56,7 +56,7 @@ final public class BankSingleton {
         double amount = Double.parseDouble(string);
         Account loggedIn = getLoggedIn();
         loggedIn.setChecking(loggedIn.getChecking()+amount);
-        System.out.printf("%f[.2] Deposited, %f[.2] Remaining\n",amount, loggedIn.getChecking());
+        System.out.printf("%f.2 Deposited, %f.2 Remaining\n",amount, loggedIn.getChecking());
     }
 
     public static void deposit(String account_id, String str_amount) {

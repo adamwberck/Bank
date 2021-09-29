@@ -23,9 +23,9 @@ public class BankApp {
                 String key = BankController.selector(screen.getName(), (int) input);
                 screen = key != null ? screen_map.get(key) : null;
             } else {
-                Form form = (Form) screen;
                 var list = (List<String>) input;
-                BankController.form(screen.getName(), list);
+                String key = BankController.form(screen.getName(), list);
+                screen =screen_map.get(key);
             }
         }
     }

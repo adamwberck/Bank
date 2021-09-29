@@ -1,6 +1,6 @@
 Selection
 Welcome
 Welcome!
-1. Create New Account [new]
-2. Login [login]
-3. Exit [exit]
+1. Create New Account
+2. Login
+3. Exit
