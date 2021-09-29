@@ -21,13 +21,11 @@ public class BankApp {
             Object input = BankPrinter.display(screen);
             if (screen instanceof Selection) {
                 String key = BankController.selector(screen.getName(), (int) input);
-                screen = screen_map.get(key);
+                screen = key != null ? screen_map.get(key) : null;
             } else {
                 Form form = (Form) screen;
                 var list = (List<String>) input;
-                for (int i = 0; i < form.size(); i++) {
-                    BankController.form(screen.getName(), i, list.get(i));
-                }
+                BankController.form(screen.getName(), list);
             }
         }
     }
