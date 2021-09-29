@@ -1,4 +1,5 @@
 Selection
+Customer
 Welcome!
 1. Deposit Amount
 2. Withdraw Amount

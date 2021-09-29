@@ -1,17 +1,22 @@
 package com.bank.model;
 
-import java.util.ArrayList;
+import com.bank.controller.BankController;
+
 import java.util.List;
 
 public class Selection extends Screen{
-    private final List<Option> optionList;
+    private final List<String> optionList;
 
-    public Selection(String name, String message, List<Option> optionList) {
+    public Selection(String name, String message, List<String> optionList) {
         super(name, message);
         this.optionList = optionList;
     }
 
-    public Option get(int i){
+    public String get(int i){
         return optionList.get(i);
+    }
+
+    public int size() {
+        return optionList.size();
     }
 }
